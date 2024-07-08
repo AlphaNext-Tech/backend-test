@@ -44,16 +44,16 @@ You should finish the test project by Thursday 11th July. 2024
 # Quality Assurance
 Use the following checklist to ensure high quality of the project.
 
-# General:
+# General
    - The application should run without errors.
    - Are all requirements set above met?
    - Is the coding style consistent?
    - Is the API well documented?
 
-# Submission:
+# Submission
 1.	A link to the GitHub repository.
 2.	Briefly describe how you decided on the tools that you used.
 
-# Have Fun Coding: 
+# Have Fun Coding
    - This challenge description is intentionally vague in some aspects, but if you need assistance, feel free to ask for help.
    - If any of this seems out of your current level, you may skip it, but remember to tell us about it in the pull request.
