@@ -1,59 +1,65 @@
-# backend-test project
-Alpha-Next Backend test
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+</p>
 
-# Scope
-In this challenge, you should build a basic API for an application that provides competitor analysis. The features should include:
+[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-1. Creation of a Competitor Profile:
-   - The profile should include the business name, type, and location.
-   - Include metrics like website traffic (dummy data is fine).
- 
-2.	Viewing Competitor Details:
-    - Show detailed metrics for each competitor, including website traffic and top-performing pages (dummy data is fine).
+  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+    <p align="center">
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
+<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
+<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
+    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+</p>
+  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
+  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-# Requirements
+## Description
 
-1.	Create the project using any technology of your preference.
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-2.	Although you can use as many dependencies as you want, manage them wisely.
+## Running the app
 
-3.	The API must be documented in some way.
+Ensure NodeJS is installed on your machine, otherwise download and install from (https://nodejs.org/en) If yarn is not installed, simply run `npm install -g yarn` to install it
+First create a .env file at the root of the project, and add the environment variables included in the email:
 
-# Deliverables
-The project source code and dependencies should be made available on GitHub. Here are the steps you should follow:
+DATABASE_URI=
 
-1.	Fork this repository to your GitHub account (create an account if you don’t have one).
+## Installation
 
-2.	Create a “development” branch and commit the code to it. Do not push the code to the main branch.
+```bash
+$ yarn install
+```
 
-3.	Include a README file that describes:
-    - Special build instructions, if any.
-    -  List of third-party libraries used and short description of why/how they were used.
-    -  link to the API documentation.
+```bash
+# development
+$ yarn run start
 
-4.	Once the work is complete, create a pull request from “development” into “main” and send us the link.
+# watch mode
+$ yarn run start:dev
 
-5.	Avoid using huge commits hiding your progress. Feel free to work on a branch and use git rebase to adjust your commits before submitting the final version.
+# production mode
+$ yarn run start:prod
+```
 
-# Coding Standards
-When working on the project, be as clean and consistent as possible.
+## Support
 
-# Project Deadline
-You should finish the test project by Thursday 11th July. 2024
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-# Quality Assurance
-Use the following checklist to ensure high quality of the project.
+## Stay in touch
 
-# General
-   - The application should run without errors.
-   - Are all requirements set above met?
-   - Is the coding style consistent?
-   - Is the API well documented?
+- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Website - [https://nestjs.com](https://nestjs.com/)
+- Twitter - [@nestframework](https://twitter.com/nestframework)
 
-# Submission
-1.	A link to the GitHub repository.
-2.	Briefly describe how you decided on the tools that you used.
+## License
 
-# Have Fun Coding
-   - This challenge description is intentionally vague in some aspects, but if you need assistance, feel free to ask for help.
-   - If any of this seems out of your current level, you may skip it, but remember to tell us about it in the pull request.
+Nest is [MIT licensed](LICENSE).
