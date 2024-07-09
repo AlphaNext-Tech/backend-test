@@ -22,9 +22,15 @@ $ yarn run start:dev
 $ yarn run start:prod
 ```
 
+## Assumptions
+1. No provisions for auth is required
+2. PATCH/PUT endpoints were not specified
+3. Environment variables were not added to version control (but were included in my response email)
+
 ## Documentation
 
-After starting the app, find the documentation [here](http://localhost:3000/api/v1/docs)
+After starting the app, find the documentation [here](http://localhost:3000/api/v1/docs) or copy and paste in localhost:3000/api/v1/docs 
+into your browser
 
 ## 3rd-party Libraries Used
 1. **NestJS**: A progressive Node.js framework for building efficient, reliable, and scalable server-side applications. It uses modern JavaScript, is built with TypeScript (preserving compatibility with pure JavaScript), and combines elements of OOP (Object-Oriented Programming), FP (Functional Programming), and FRP (Functional Reactive Programming).
