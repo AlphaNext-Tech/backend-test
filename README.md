@@ -1,8 +1,3 @@
-
-## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
-
 ## Running the app
 
 Ensure NodeJS is installed on your machine, otherwise download and install from (https://nodejs.org/en) If yarn is not installed, simply run `npm install -g yarn` to install it
