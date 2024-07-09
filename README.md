@@ -1,59 +1,55 @@
-# backend-test project
-Alpha-Next Backend test
+## Running the app
 
-# Scope
-In this challenge, you should build a basic API for an application that provides competitor analysis. The features should include:
+Ensure NodeJS is installed on your machine, otherwise download and install from (https://nodejs.org/en) If yarn is not installed, simply run `npm install -g yarn` to install it. <br>
+First create a .env file at the root of the project, and add the environment variables included in the email:
 
-1. Creation of a Competitor Profile:
-   - The profile should include the business name, type, and location.
-   - Include metrics like website traffic (dummy data is fine).
- 
-2.	Viewing Competitor Details:
-    - Show detailed metrics for each competitor, including website traffic and top-performing pages (dummy data is fine).
+DATABASE_URI=
 
-# Requirements
+### Installation
 
-1.	Create the project using any technology of your preference.
+```bash
+$ yarn install
+```
 
-2.	Although you can use as many dependencies as you want, manage them wisely.
+```bash
+# development
+$ yarn run start
 
-3.	The API must be documented in some way.
+# watch mode
+$ yarn run start:dev
 
-# Deliverables
-The project source code and dependencies should be made available on GitHub. Here are the steps you should follow:
+# production mode
+$ yarn run start:prod
+```
 
-1.	Fork this repository to your GitHub account (create an account if you don’t have one).
+## Assumptions
+1. No provisions for auth is required
+2. PATCH/PUT endpoints were not specified
+3. Environment variables were not added to version control (but were included in my response email)
 
-2.	Create a “development” branch and commit the code to it. Do not push the code to the main branch.
+## Documentation
 
-3.	Include a README file that describes:
-    - Special build instructions, if any.
-    -  List of third-party libraries used and short description of why/how they were used.
-    -  link to the API documentation.
+After starting the app, find the documentation [here](http://localhost:3000/api/v1/docs) or copy and paste in `localhost:3000/api/v1/docs` 
+into your browser
 
-4.	Once the work is complete, create a pull request from “development” into “main” and send us the link.
+## 3rd-party Libraries Used
+1. **NestJS**: A progressive Node.js framework for building efficient, reliable, and scalable server-side applications. It uses modern JavaScript, is built with TypeScript (preserving compatibility with pure JavaScript), and combines elements of OOP (Object-Oriented Programming), FP (Functional Programming), and FRP (Functional Reactive Programming).
 
-5.	Avoid using huge commits hiding your progress. Feel free to work on a branch and use git rebase to adjust your commits before submitting the final version.
+2. **@nestjs/config**: Provides a way to manage and access configuration variables in a NestJS application. It allows for a consistent way to access configuration settings across the application.
 
-# Coding Standards
-When working on the project, be as clean and consistent as possible.
+3. **@nestjs/jwt**: This package is used for implementing JSON Web Token (JWT) authentication in a NestJS application. It provides utilities for signing and verifying JWTs, enabling secure authentication mechanisms.
 
-# Project Deadline
-You should finish the test project by Thursday 11th July. 2024
+4. **@nestjs/mongoose**: Integrates Mongoose, a MongoDB object modeling tool, with NestJS. It allows for defining schemas, models, and interacting with MongoDB databases using a more structured approach.
 
-# Quality Assurance
-Use the following checklist to ensure high quality of the project.
+5. **@nestjs/swagger**: Facilitates the integration of Swagger, a tool for documenting and testing APIs, with NestJS applications. It allows developers to generate interactive API documentation based on decorators used in the code.
 
-# General
-   - The application should run without errors.
-   - Are all requirements set above met?
-   - Is the coding style consistent?
-   - Is the API well documented?
+6. **class-transformer**: This package is used to transform plain JavaScript objects into class instances and vice versa. It helps in mapping properties and applying transformations to objects, which is useful for serialization and deserialization.
 
-# Submission
-1.	A link to the GitHub repository.
-2.	Briefly describe how you decided on the tools that you used.
+7. **class-validator**: Provides a set of decorators and utility functions for validating class properties in TypeScript. It is used to enforce validation rules on DTOs (Data Transfer Objects) to ensure the correctness of data passed to the application.
 
-# Have Fun Coding
-   - This challenge description is intentionally vague in some aspects, but if you need assistance, feel free to ask for help.
-   - If any of this seems out of your current level, you may skip it, but remember to tell us about it in the pull request.
+8. **mongoose**: A MongoDB object modeling tool for Node.js, used to define schemas, create models, and interact with MongoDB databases. It is the core library that provides the data modeling functionality used by `@nestjs/mongoose`.
+
+
+## License
+
+Nest is [MIT licensed](LICENSE).
