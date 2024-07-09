@@ -29,7 +29,7 @@ $ yarn run start:prod
 
 ## Documentation
 
-After starting the app, find the documentation [here](http://localhost:3000/api/v1/docs) or copy and paste in localhost:3000/api/v1/docs 
+After starting the app, find the documentation [here](http://localhost:3000/api/v1/docs) or copy and paste in `localhost:3000/api/v1/docs` 
 into your browser
 
 ## 3rd-party Libraries Used
