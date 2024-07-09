@@ -1,6 +1,6 @@
 ## Running the app
 
-Ensure NodeJS is installed on your machine, otherwise download and install from (https://nodejs.org/en) If yarn is not installed, simply run `npm install -g yarn` to install it
+Ensure NodeJS is installed on your machine, otherwise download and install from (https://nodejs.org/en) If yarn is not installed, simply run `npm install -g yarn` to install it. <br>
 First create a .env file at the root of the project, and add the environment variables included in the email:
 
 DATABASE_URI=
