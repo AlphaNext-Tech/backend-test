@@ -1,59 +1,50 @@
-# backend-test project
-Alpha-Next Backend test
+# Competitor Analysis API
 
-# Scope
-In this challenge, you should build a basic API for an application that provides competitor analysis. The features should include:
+## Setup Instructions
 
-1. Creation of a Competitor Profile:
-   - The profile should include the business name, type, and location.
-   - Include metrics like website traffic (dummy data is fine).
- 
-2.	Viewing Competitor Details:
-    - Show detailed metrics for each competitor, including website traffic and top-performing pages (dummy data is fine).
+1. Clone the repository.
+2. Create and activate a virtual environment.
+   - cd to project directory
+   - Then in the terminal type `python -m venv venv`
+   - Activate the venv for window `venv\Scripts\activate`
+   - Activate the venv for mac `source venv/bin/activate`
+3. Install dependencies using `pip install -r requirements.txt`.
+4. Initialize Migrations `flask db init`
+5. Generate Migration Script `flask db migrate -m "Initial migration."`
+6. Apply Migration `flask db upgrade`
+7. Run the application using `python run.py or flask run`.
 
-# Requirements
+## Short description on the dependencies used
 
-1.	Create the project using any technology of your preference.
+- FLASK_MIGRATE: "Integrates Flask with Alembic for handling database migrations, making schema changes manageable."
+- FLASK_SQLALCHEMY: "Adds SQLAlchemy support to Flask, used for ORM (Object Relational Mapping) to interact with the database."
+- SQLALCHEMY: "The SQL toolkit and ORM used for interacting with the database."
 
-2.	Although you can use as many dependencies as you want, manage them wisely.
+## Unit Tests
 
-3.	The API must be documented in some way.
+- python -m unittest discover -s tests
 
-# Deliverables
-The project source code and dependencies should be made available on GitHub. Here are the steps you should follow:
+## API Documentation
 
-1.	Fork this repository to your GitHub account (create an account if you don’t have one).
+The API has the following endpoints:
 
-2.	Create a “development” branch and commit the code to it. Do not push the code to the main branch.
+### Create a Competitor Profile
 
-3.	Include a README file that describes:
-    - Special build instructions, if any.
-    -  List of third-party libraries used and short description of why/how they were used.
-    -  link to the API documentation.
+- **URL:** `/competitor-profile`
+- **Method:** `POST`
+- **Request Body:**
 
-4.	Once the work is complete, create a pull request from “development” into “main” and send us the link.
+  ```json example
+  {
+      "business_name": "Competitor A",
+      "business_type": "Type A",
+      "location": "Location A",
+      "website_traffic": 1000,
+      "top_performing_pages": "Page A, Page B"
+  }
 
-5.	Avoid using huge commits hiding your progress. Feel free to work on a branch and use git rebase to adjust your commits before submitting the final version.
+### Fetch a single competitor profile
 
-# Coding Standards
-When working on the project, be as clean and consistent as possible.
-
-# Project Deadline
-You should finish the test project by Thursday 11th July. 2024
-
-# Quality Assurance
-Use the following checklist to ensure high quality of the project.
-
-# General
-   - The application should run without errors.
-   - Are all requirements set above met?
-   - Is the coding style consistent?
-   - Is the API well documented?
-
-# Submission
-1.	A link to the GitHub repository.
-2.	Briefly describe how you decided on the tools that you used.
-
-# Have Fun Coding
-   - This challenge description is intentionally vague in some aspects, but if you need assistance, feel free to ask for help.
-   - If any of this seems out of your current level, you may skip it, but remember to tell us about it in the pull request.
+- **URL:** `/competitor/<int:id>`
+- **Method:** `GET`
+- **Request Body:**
