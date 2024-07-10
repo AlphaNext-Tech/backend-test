@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:13
+    container_name: postgres
+    environment:
+      POSTGRES_USER: alphanext
+      POSTGRES_PASSWORD: alphanext12
+      POSTGRES_DB: alphanext_test
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+
+  competitor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: competitor
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/alphanext_test
+      SPRING_DATASOURCE_USERNAME: alphanext
+      SPRING_DATASOURCE_PASSWORD: alphanext12
+
+volumes:
+  postgres_data:

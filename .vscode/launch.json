@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CompetitorApplication",
+            "request": "launch",
+            "mainClass": "com.core.competitor.CompetitorApplication",
+            "projectName": "competitior"
+        }
+    ]
+}
