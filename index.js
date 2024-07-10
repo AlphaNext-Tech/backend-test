@@ -4,7 +4,7 @@ const competitorRoutes = require('./routes/competitors');
 
 const app = express();
 app.use(bodyParser.json());
-app.use('/competitors', competitorRoutes);
+app.use('/api/v1/competitors', competitorRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
