@@ -9,7 +9,7 @@ info:
   license:
     name: MIT
     url: "http://opensource.org/licenses/MIT"
-host: "localhost:5000"
+host: "https://backend-test-ig1x.onrender.com"
 securityDefinitions:
   Bearer:
     type: apiKey
