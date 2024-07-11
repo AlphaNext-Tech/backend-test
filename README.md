@@ -36,11 +36,11 @@ npx sequelize-cli db:migrate
 
 ## Dependencies
 
-express: Web framework for Node.js.
-mysql2: MySQL client for Node.js.
-sequelize: Promise-based Node.js ORM for MySQL.
-sequelize-cli: Command-line interface for Sequelize.
-nodemon: Utility that automatically restarts the server when file changes are detected.
-@faker-js/faker: Library for generating fake data.
+1. **Express:** Web framework for Node.js.
+2. **mysql2:** MySQL client for Node.js.
+3. **Sequelize:** Promise-based Node.js ORM for MySQL.
+4. **Sequelize-cli:** Command-line interface for Sequelize.
+5. **Nodemon:** Utility that automatically restarts the server when file changes are detected.
+6. **@faker-js/faker:** Library for generating fake data.
 
 
