@@ -71,7 +71,7 @@ You can start contributing to the codebase once you're done with your local setu
 
 
 ## Rest API Documentation
-
+-   To access the deployed endpoints route [here](https://backend-test-ig1x.onrender.com)
 -   To access the local endpoints route [here](http://localhost:5000/api-doc/)
 
 
