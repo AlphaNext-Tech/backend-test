@@ -1,59 +1,82 @@
-# backend-test project
-Alpha-Next Backend test
+# Backend Test Project
 
-# Scope
-In this challenge, you should build a basic API for an application that provides competitor analysis. The features should include:
+## Project API
 
-1. Creation of a Competitor Profile:
-   - The profile should include the business name, type, and location.
-   - Include metrics like website traffic (dummy data is fine).
- 
-2.	Viewing Competitor Details:
-    - Show detailed metrics for each competitor, including website traffic and top-performing pages (dummy data is fine).
+## Main Technology Used
 
-# Requirements
+- Express: A minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+- Mongoose: An ODM (Object Data Modeling) library for MongoDB and Node.js. It manages relationships between data, provides schema validation, and is used to translate between objects in 
+  code and the representation of those objects in MongoDB.
+- Morgan: HTTP request logger middleware for Node.js. It simplifies logging requests to the console.
+- Express Validator: A set of express.js middlewares that wraps validator.js functions to validate and sanitize request input
 
-1.	Create the project using any technology of your preference.
 
-2.	Although you can use as many dependencies as you want, manage them wisely.
+## Setup
 
-3.	The API must be documented in some way.
+To setup the app,
 
-# Deliverables
-The project source code and dependencies should be made available on GitHub. Here are the steps you should follow:
+1. Clone the app to your local machine and run `npm install`
 
-1.	Fork this repository to your GitHub account (create an account if you don’t have one).
+2. Provide local credentials for running the app the `src/config/dev.js`
 
-2.	Create a “development” branch and commit the code to it. Do not push the code to the main branch.
+3. Then run `npm start` for production 
 
-3.	Include a README file that describes:
-    - Special build instructions, if any.
-    -  List of third-party libraries used and short description of why/how they were used.
-    -  link to the API documentation.
+4. Then run `npm run start:dev` for development 
 
-4.	Once the work is complete, create a pull request from “development” into “main” and send us the link.
+**NOTE** The variables provided in `variables.env` is for the staging env and so for development purpose, you should config `dev.js`. 
 
-5.	Avoid using huge commits hiding your progress. Feel free to work on a branch and use git rebase to adjust your commits before submitting the final version.
 
-# Coding Standards
-When working on the project, be as clean and consistent as possible.
+## Folder Structure
 
-# Project Deadline
-You should finish the test project by Thursday 11th July. 2024
+```
+Basekart-api/
+  .github
+  node_modules/
+  src/
+    components
+      competitor
+        competitor.controller.js
+        competitor.model.js
+        competitor.routes.js
+        competitor.service.js
+        competitor.validator.js
+    config
+      ci.js
+      dev.js
+      prod.js
+    library
+      helpers
+        errorFormatHelpers.js
+        loggerHelpers.js
+        responseHelpers.js
+      middlewares
+        errorHandler.js
+    app.js
+    server.js
+  .env
+  .eslintrc.js
+  .gitignore
+  package-lock.json
+  package.json
+  README.md
+```
 
-# Quality Assurance
-Use the following checklist to ensure high quality of the project.
+The core of the app can be found in the `src` folder has illustrated above. This is a small app, and I have structured the app to make it easier to enable microservices in the future. To achieve this, we have broken down the contents in the `components` folder into modules. At the moment, there's just few modules which are the **competitors**  module.
+If you need more details on this architecture, you can find that by searching for _node best practices_ on GitHub
 
-# General
-   - The application should run without errors.
-   - Are all requirements set above met?
-   - Is the coding style consistent?
-   - Is the API well documented?
+## How to contribute
 
-# Submission
-1.	A link to the GitHub repository.
-2.	Briefly describe how you decided on the tools that you used.
+You can start contributing to the codebase once you're done with your local setup.
 
-# Have Fun Coding
-   - This challenge description is intentionally vague in some aspects, but if you need assistance, feel free to ask for help.
-   - If any of this seems out of your current level, you may skip it, but remember to tell us about it in the pull request.
+
+
+## Rest API Documentation
+-   To access the deployed endpoints route [here](https://backend-test-ig1x.onrender.com/api-doc/)
+-   To access the local endpoints route [here](http://localhost:5000/api-doc/)
+
+
+
+## LICENCE
+
+
+Make sure to replace placeholders like `<your-mongodb-uri>` and `<your-port>` with actual values and adjust the repository URL and project structure as needed. This README provides a clear overview of the project, setup instructions, usage, and dependencies.
