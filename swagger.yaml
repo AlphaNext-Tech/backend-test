@@ -1,0 +1,169 @@
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: AlphaNext Challenge API
+  description: AlphaNext Coding Challenge API
+  termsOfService: "http://swagger.io/terms/"
+  contact:
+    name: AlphaNext
+  license:
+    name: MIT
+    url: "http://opensource.org/licenses/MIT"
+host: "localhost:5000"
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
+    description: 'Enter the token with the `Bearer: ` prefix, e.g. "Bearer abcde12345".'
+basePath: /
+schemes:
+  - https
+  - http
+paths:
+  /:
+    get:
+      summary: Healthcheck
+      operationId: App health check
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+  /api/v1/competitors/api-status:
+    get:
+      summary: Healthcheck
+      tags:
+        - Competitors
+      operationId: Competitor module health check
+      responses:
+        "200":
+          description: A "Competitor module working on AlphaNext-backend" message
+          schema:
+            type: object
+            properties:
+              msg:
+                type: string
+                example: Competitor module working on AlphaNext-backend
+  /api/v1/competitors/:
+    get:
+      summary: Get competitors
+      tags:
+        - Competitors
+      description: Retrieve a list of competitors with optional filters
+      parameters:
+        - in: query
+          name: businessName
+          type: string
+          description: Filter by business name (case-insensitive)
+        - in: query
+          name: type
+          type: string
+          description: Filter by type (case-insensitive)
+        - in: query
+          name: location
+          type: string
+          description: Filter by location (case-insensitive)
+      responses:
+        '200':
+          description: A list of competitors
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Competitor'
+        '400':
+          description: Bad request
+          schema:
+            $ref: '#/definitions/Error'
+        '409':
+          description: Conflict request
+          schema:
+          type: object
+          properties:
+          success:
+              type: boolean
+              example: false
+          message:
+              type: string
+              example: Business name already exist!!
+  /api/v1/competitors/create:
+    post:
+      summary: Create a competitor
+      tags:
+        - Competitors
+      description: Create a new competitor profile
+      parameters:
+        - in: body
+          name: body
+          required: true
+          schema:
+            $ref: '#/definitions/Competitor'
+      responses:
+        '201':
+          description: Competitor created successfully
+          schema:
+            $ref: '#/definitions/Competitor'
+        '400':
+          description: Bad request
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Competitor:
+    type: object
+    properties:
+      _id:
+        type: string
+        description: The competitor ID
+        example: 668f2589951db18567c04baa
+      businessName:
+        type: string
+        description: The name of the business
+        example: Competitor A
+      type:
+        type: string
+        description: The type of business
+        example: E-commerce
+      location:
+        type: string
+        description: The location of the business
+        example: New York
+      websiteTraffic:
+        $ref: '#/definitions/WebsiteTraffic'
+      topPerformingPages:
+        type: array
+        items:
+          $ref: '#/definitions/TopPerformingPage'
+  WebsiteTraffic:
+    type: object
+    properties:
+      uniqueVisitors:
+        type: integer
+        description: Number of unique visitors
+        example: 1000
+      pageViews:
+        type: integer
+        description: Number of page views
+        example: 5000
+      bounceRate:
+        type: number
+        format: float
+        description: Bounce rate percentage
+        example: 50.5
+  TopPerformingPage:
+    type: object
+    properties:
+      url:
+        type: string
+        description: URL of the top-performing page
+        example: /home
+      trafficVolume:
+        type: integer
+        description: Volume of traffic to the page
+        example: 300
+  Error:
+    type: object
+    properties:
+      error:
+        type: string
+        description: Error message
+        example: Internal server error
