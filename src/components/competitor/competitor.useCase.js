@@ -1,4 +1,3 @@
-const { remove } = require('lodash');
 const competitorService = require('./competitor.service');
 
 const competitorUsecase = {

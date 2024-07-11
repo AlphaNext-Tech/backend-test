@@ -33,28 +33,7 @@ const competitorService = {
         const competitors = await competitorModel.find(filter);
 
         return competitors
-    },
-    async findDuplicateFavorite(userid, productid) {
-        return await FavoriteService.findDuplicateFavorite(userid, productid);
-    },
-    async favoritesCreate(payload) {
-        return await FavoriteService.createFavorite(payload);
-    },
-    async fetchAll(user) {
-        return await FavoriteService.fetchAll(user);
-    },
-    async getSingleFavorite(userId, FavoriteId) {
-        return await FavoriteService.getSingleFavorite(userId, FavoriteId);
-    },
-    async getSingleFavoriteByProductId(userId, productId) {
-        return await FavoriteService.getSingleFavoriteByProductId(userId, productId);
-    },
-    async remove(userId, productId) {
-        return await FavoriteService.removeFavorite(userId, productId);
-    },
-    async removeDeletedProduct(productId) {
-        return await FavoriteService.removeDeletedProduct(productId);
-    },
+    }
 };
 
 module.exports = competitorService;
